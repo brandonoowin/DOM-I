@@ -39,4 +39,79 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
   },
 };
 
+const italic = document.querySelectorAll("nav a");
+italic.forEach((element) => {
+  element.classList.add('italic'); 
+});
+
+
+const navLinks = document.querySelectorAll('nav a');
+navLinks.forEach((link, index) => {
+  const navItem = `nav-item-${index + 1}`;
+  link.textContent = siteContent.nav[navItem];
+});
+
+const ctaText = document.querySelector(".cta h1");
+ctaText.textContent = siteContent["cta"]["h1"];
+
+const ctaButtonText = document.querySelector(".cta button");
+ctaButtonText.textContent = siteContent["cta"]["button"];
+
+const greatIdeaLogo = document.querySelector("#logo-img");
+greatIdeaLogo.src = siteContent["images"]["logo-img"]
+const ctaImg = document.querySelector("#cta-img"); 
+ctaImg.src = siteContent["images"]["cta-img"];
+
+const middleImg = document.querySelector(".middle-img"); 
+middleImg.src = siteContent["images"]["accent-img"]
+
+
+
+
+// const mainContent = document.querySelector('.main-content');
+// mainContent.style.display = 'flex';
+
+const textContents = document.querySelectorAll('.top-content .text-content');
+const featureHead = textContents[0].querySelector('h4')
+featureHead.textContent = siteContent['main-content']['features-h4'];
+const featureP = textContents[0].querySelector('p');
+featureP.textContent = siteContent['main-content']["features-content"];
+
+const aboutHeading = textContents[1].querySelector('h4');
+aboutHeading.textContent = siteContent['main-content']['about-h4'];
+const aboutP = textContents[1].querySelector('p');
+aboutP.textContent = siteContent['main-content']['about-content'];
+
+
+const textContentsBottom = document.querySelectorAll('.bottom-content .text-content');
+const serviceHead = textContentsBottom[0].querySelector('h4')
+serviceHead.textContent = siteContent['main-content']["services-h4"];
+const serviceP = textContentsBottom[0].querySelector('p');
+serviceP.textContent = siteContent['main-content']["services-content"];
+
+const productHead = textContentsBottom[1].querySelector('h4');
+productHead.textContent = siteContent['main-content']["product-h4"];
+const productP = textContentsBottom[1].querySelector('p');
+productP.textContent = siteContent['main-content']['product-content'];
+
+const visionHead = textContentsBottom[2].querySelector('h4');
+visionHead.textContent = siteContent['main-content']["vision-h4"];
+const visionP = textContentsBottom[2].querySelector('p');
+visionP.textContent = siteContent['main-content']["vision-content"];
+
+const contactSectionHead = document.querySelector('.contact h4');
+contactSectionHead.textContent = siteContent['contact']['contact-h4']
+
+const contactPTags = document.querySelectorAll('.contact p');
+const address = contactPTags[0]
+address.textContent = siteContent['contact']['address'];
+const phone = contactPTags[1]
+phone.textContent = siteContent['contact']['phone'];
+const email = contactPTags[2]
+email.textContent = siteContent['contact']['email'];
+
+const footer = document.querySelector('footer a');
+footer.textContent = siteContent['footer']['copyright']
+footer.classList.add("bold");
+
 console.log('project wired!')
